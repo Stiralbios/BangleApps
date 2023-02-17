@@ -26,6 +26,7 @@
 
     init: function () {
       // check settings and set default if needed
+      t=getTime();
       this.showHRM = false;
       this.showAltitude = false;
       this.lock_precision = this.precision;
@@ -58,6 +59,7 @@
       }
       // start the clock unlocked
       unlock();
+      print(getTime()-t)
     },
 
     draw: function (date) {
